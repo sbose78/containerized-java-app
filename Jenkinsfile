@@ -1,5 +1,6 @@
 node {
     stage('Build') {
+        checkout scm
         sh 'ls -ltr && ls -ltr && whoami'
     }
     stage('Test') {
