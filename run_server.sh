@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 
-echo  "Ensuring the port $SERVER_PORT is freed for the java app."
+echo  "Step 2: Ensuring the port $SERVER_PORT is freed for the java app."
 fuser -k -n tcp $SERVER_PORT
 
 echo " Starting the server in detached mode. This will take about 5 minutes the first time  "
