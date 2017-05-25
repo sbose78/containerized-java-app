@@ -1,9 +1,9 @@
 node {
     stage('Build') {
-        sh 'ls -ltr'
+        sh 'https://github.com/sbose78/containerized-java-app.git'
     }
     stage('Test') {
-        sh './build.sh'
+        sh 'cd containerized-java-app && ./build.sh'
     }
     stage('Deploy') {
         echo 'Deploying....'
