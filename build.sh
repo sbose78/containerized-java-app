@@ -1,4 +1,4 @@
 #!/bin/bash
 
 docker ps
-echo 'Dependencies installed'
+echo 'Dependencies installed again'
