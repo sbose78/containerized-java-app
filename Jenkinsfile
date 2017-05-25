@@ -1,6 +1,6 @@
 node {
     stage('Build') {
-        ls -ltr
+        echo 'ls -ltr'
     }
     stage('Test') {
         docker ps
