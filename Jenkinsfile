@@ -1,9 +1,9 @@
 node {
     stage('Build') {
-        echo 'Building ( my first step )....'
+        ./build.sh
     }
     stage('Test') {
-        echo 'Building....'
+        docker ps
     }
     stage('Deploy') {
         echo 'Deploying....'
