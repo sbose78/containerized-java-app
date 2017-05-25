@@ -2,6 +2,3 @@
 
 docker ps
 echo 'Dependencies installed'
-
-
-
