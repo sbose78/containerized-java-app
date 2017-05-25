@@ -1,10 +1,6 @@
 #!/bin/bash
 
-yum -y install \
-    docker \
-    curl
-    
-service docker start
+docker ps
 echo 'Dependencies installed'
 
 
