@@ -1,9 +1,9 @@
 node {
     stage('Build') {
-        sh 'cd ${WORKSPACE} && ls -ltr'
+        sh 'cd ${WORKSPACE}/containerized-java-app && ls -ltr'
     }
     stage('Test') {
-        sh 'chmod +x build.sh && ./build.sh'
+        sh 'cd ${WORKSPACE}/containerized-java-app && chmod +x build.sh && ./build.sh'
     }
     stage('Deploy') {
         echo 'Deploying....'
