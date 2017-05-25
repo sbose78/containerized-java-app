@@ -3,7 +3,7 @@ node {
         sh 'ls -ltr'
     }
     stage('Test') {
-        sh 'docker ps'
+        sh './build.sh'
     }
     stage('Deploy') {
         echo 'Deploying....'
