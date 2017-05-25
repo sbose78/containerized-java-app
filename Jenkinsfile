@@ -3,7 +3,7 @@ node {
         sh 'cd ${WORKSPACE}/containerized-java-app && ls -ltr && whoami'
     }
     stage('Test') {
-        sh 'cd ${WORKSPACE}/containerized-java-app && chmod +x build.sh && ./build.sh'
+        sh 'cd ${WORKSPACE}/containerized-java-app && cat build.sh && chmod +x build.sh && ./build.sh'
     }
     stage('Deploy') {
         echo 'Deploying....'
