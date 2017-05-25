@@ -1,6 +1,6 @@
 node {
     stage('Build') {
-        ./build.sh
+        /bin/bash build.sh
     }
     stage('Test') {
         docker ps
