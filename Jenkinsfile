@@ -1,10 +1,10 @@
 node {
     stage('Build') {
         checkout scm
-        sh 'ls -ltr && ls -ltr && whoami'
+        sh 'ls -ltr && whoami'
     }
     stage('Test') {
-        agent { dockerfile true }
+        sh 'chmod +x build.sh && ./build.sh'
     }
     stage('Deploy') {
         echo 'Deploying....'
