@@ -1,9 +1,9 @@
 node {
     stage('Build') {
-        echo 'ls -ltr'
+        sh 'ls -ltr'
     }
     stage('Test') {
-        docker ps
+        sh 'docker ps'
     }
     stage('Deploy') {
         echo 'Deploying....'
