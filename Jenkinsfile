@@ -1,6 +1,6 @@
 node {
     stage('Build') {
-        sh 'ls -ltr && rm -rf ${WORKSPACE}/containerized-java-app && ls -ltr && whoami'
+        sh 'ls -ltr && ls -ltr && whoami'
     }
     stage('Test') {
         sh 'cd ${WORKSPACE}/containerized-java-app && cat build.sh && chmod +x build.sh && ./build.sh'
