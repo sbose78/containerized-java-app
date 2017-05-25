@@ -1,7 +1,7 @@
 node {
     stage('Build') {
-        sh 'sshopts="-t -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -l root"'
-        sh 'ssh_cmd="ssh $sshopts $CICO_hostname"'
+        sh 'export sshopts="-t -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -l root"'
+        sh 'export ssh_cmd="ssh $sshopts $CICO_hostname"'
         sh "env > jenkins-env"
         sh 'cd ${WORKSPACE}/containerized-java-app && ls -ltr && whoami'
     }
