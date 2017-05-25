@@ -1,9 +1,9 @@
 node {
     stage('Build') {
-        sh 'git clone https://github.com/sbose78/containerized-java-app.git'
+        sh 'cd ${WORKSPACE} && ls -ltr'
     }
     stage('Test') {
-        sh 'cd containerized-java-app && chmod +x build.sh && ./build.sh'
+        sh 'chmod +x build.sh && ./build.sh'
     }
     stage('Deploy') {
         echo 'Deploying....'
